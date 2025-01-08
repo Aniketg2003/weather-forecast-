@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/contact.css">
+  <title>Weather Forecast</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" ><img src="/image/logo1.png" style="height: 45px; width: 50px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link text-link" href="/html/weather.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/comparison.html">Comparison</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/forecast.html">16 Days</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/weatheral.html">Weather Alert</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/html/about.html">About </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/html/contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="contact-us container">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mvgopden" method="POST" id="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        <small class="error" id="name-error"></small>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <small class="error" id="email-error"></small>
+      </div>
+      <div class="form-group">
+        <label for="query">Any Query:</label>
+        <textarea name="query" id="query" rows="4" placeholder="Type your query here"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea name="message" id="message" rows="4" placeholder="Type your message here" required></textarea>
+        <small class="error" id="message-error"></small>
+      </div>
+      <button  type="submit">Submit</button>
+      <div class="success" id="success-message"></div>
+    </form>
+  </div>
+
+  <div class=" footer bg-dark">
+    <p class="foot">Copyright © 2024-2025 , Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </div>
+  <script src="/java/contact.js"></script>
