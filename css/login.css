@@ -1,0 +1,114 @@
+/* Reset some default styles */
+body,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8cba0, #a1c6ed, #d5c4e1, #b1e6d6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.all {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    
+    padding: 30px;
+    
+}
+
+
+.container {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-Box {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.text-link {
+    font-size: 14px;
+}
+
+.text-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.text-link a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    padding-top: 5px;
+    font-weight: bold; /* Make the link bold for emphasis */
+     
+}
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px 10px 10px 10px; /* Adjusted padding for icon */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="password"]:focus {
+    border-color: black;
+    outline: none;
+}
+
+i {
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black; /* Icon color */
+}

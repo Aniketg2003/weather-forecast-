@@ -1,0 +1,730 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif ,"Poppins";
+}
+/*hover effect*/
+.text-link {
+    text-decoration: none; 
+    color: white; 
+    position: relative; /* Position for pseudo-element */
+}
+
+.text-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust based on your font size */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background: white; /* Color of the underline */
+    transform: scaleX(0); /* Start hidden */
+    transition: transform 0.3s ease; /* Transition for smooth effect */
+}
+
+.text-link:hover::after {
+    transform: scaleX(1); /* Show underline */
+}
+
+.log {
+    display: inline-block; 
+    white-space: normal; 
+    text-align: center; 
+    width: 100px; 
+    line-height: 1.2;
+    padding: 10px;
+}
+
+
+
+.all {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* This will allow the main content to grow and push the footer down */
+}
+body {
+    background-image: url("/image/background.jpg");
+    background-size: cover;
+    min-height: 110vh;
+    display: flex; 
+    flex-direction: column;
+}
+
+
+.container {
+    color: black;
+    margin-left: 3rem ; 
+    width: 400px;
+    height: 800px; 
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius: 20px;
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    position:absolute;
+    left: 0; 
+    top:68%; 
+    transform: translateY(-50%) translateX(-20px); 
+  
+}
+
+.container.active {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+    transform: translateY(-50%) translateX(0); /* Slide to the original position */
+}
+
+
+
+.search-city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 10%;
+}
+
+.headi{
+    color: black;
+    text-align: center;
+    font-weight: 500;
+}
+
+.search-Box{
+   
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+
+}
+.search-Box input{
+    height: 100%;
+    width:100%;
+    background: transparent;
+    border:2px solid;
+    outline: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 3px;
+}
+.search-Box input::placeholder{
+    color: black;
+    text-transform: capitalize;
+}
+.search-Box button{
+    width: 40px;
+    height: 100%;
+    background:transparent;
+    right: 0;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.search-Box i{
+    width: 40px;
+    font-size: 25px;
+
+}
+.weatherBox{
+    text-align: center;
+    margin-top: 40px;
+}
+.weatherBox img{
+    width: 60% ;
+}
+.weatherBox .description{
+     font-size: 30px;
+     font-weight: 400;
+}
+.weatherBox .temp{ 
+     font-size: 64px;
+     line-height: 1;
+     font-weight: 600;
+}
+.weatherBox .temp span{
+    position: absolute;
+    font-size: 28px; 
+    margin-left: 4px;
+}
+
+
+.weather-detail {
+    top: 0%;
+    position: relative;
+    left: 10px;
+    bottom: 40px;
+    width: 100%; /* Full width of the container */
+    max-width: 500px; /* Maximum width */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    padding: 0  10px ;
+    
+}
+
+
+
+.sun-info{
+    top: 2%;
+    position: relative;
+    left: 10px;
+    width: 100%; /* Full width of the container */
+    max-width: 500px; /* Maximum width */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    padding: 0 10px;
+
+}
+.sunset{
+    padding-left: 90px;
+}
+
+.sun-info span {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+}
+.sun-info i { 
+    font-size: 30px;
+    margin-right: 10px;
+}
+.sun-info para{
+font-size: 14px;
+font-weight: 500;
+}
+
+
+.sun-info,
+.weather-detail,
+.weatherBox,
+.not-found,
+.city-hide,
+.search-city .active{
+    visibility: hidden;
+}
+
+.sun-info.active,
+.weather-detail.active,
+.weatherBox.active,
+.not-found.active,
+.search-city
+{
+    visibility: visible;
+}
+
+
+.weather-detail .uvin,
+.weather-detail .feel,
+.weather-detail .visi,
+.weather-detail .pres,
+.weather-detail .humidity,
+.weather-detail .wind{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+   
+}
+
+.weather-detail i{
+    font-size: 35px;
+    margin-right: 10px;
+}
+.weather-detail span{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+}
+.weather-detail p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.not-found{
+    position: absolute;
+    top :150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+}
+.not-found img{
+    width: 65%;
+}
+.not-found p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+
+.footer {
+    width: 100%;
+    color: white;
+    line-height: 1rem;
+    text-align: center;
+    background-color: #343a40; 
+    padding: 10px 0; /* Add padding for better appearance*/
+    margin-top: 20px;
+    margin-bottom: 0; 
+}
+
+
+
+
+
+html, body {
+    height: 100%; /* Ensure full height for both html and body */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align children in a column */
+}
+
+.para{
+    margin: 10px;
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;; 
+    margin-bottom: 10px; /* Space below the city name */
+}
+.hide{
+    display: none;
+}
+
+.paraflag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes errorEffect{
+    0%{
+        transform: translate(10px, 5px)
+    }
+    25%{
+        transform: translate(-5px, 0)
+    }
+    50%{
+        transform: translate(8px, 2px)
+    }
+    75%{
+        transform: translate(-2px, 5px)
+    }
+    100%{
+        transform: translate(0, 0); 
+    }
+}
+.errorEffect{
+    animation: errorEffect 0.3s linear 1;
+}
+
+/*rain*/
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to go through */
+    overflow: hidden;
+    z-index: 1; /* Make sure it appears above other elements */
+}
+
+.drop {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    animation: fall linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/*cloud*/
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to go through */
+    overflow: hidden;
+    z-index: 1; /* Make sure it appears above other elements */
+}
+
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    opacity: 0.9;
+    animation: drift linear infinite;
+}
+
+@keyframes drift {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/*smoke*/
+.smoke {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to go through */
+    overflow: hidden;
+    z-index: 1; /* Make sure it appears above other elements */
+}
+
+.puff {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: rise linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50vh) scale(2);
+        opacity: 0;
+    }
+}
+/*snow*/
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to go through */
+    overflow: hidden;
+    z-index: 1; /* Make sure it appears above other elements */
+}
+
+.snowflake {
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    pointer-events: none; /* Prevents interaction with snowflakes */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+
+
+/*container 2*/
+.hourly,
+.container2{
+    visibility: visible;
+}
+.hourly.active,
+.container2.active{
+    visibility: hidden;
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333; /* Dark navbar */
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+
+.container2 {
+    color: black;
+    width: 1070px;
+    height: 400px; 
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius: 20px;
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    position:absolute;
+    left: 31%; 
+    top: 40%; 
+    transform: translateY(-50%) translateX(-20px); 
+}
+
+
+.weatherContainer {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+
+.iconsContainer {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-start; 
+    width: 100% ;
+}
+
+.icons {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 300px; 
+    width: 380px;
+    margin: 10px; 
+    border: 5px solid rgb(48, 47, 47);
+    border-radius: 10px;
+    padding: 10px; 
+    background-color:transparent; 
+    transition: transform 0.3s; 
+  
+}
+.slider-list:hover,
+.icons:hover {
+    transform: scale(1.05); /* Slightly enlarge the icon on hover */
+}
+
+
+.icons .image {
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.icons p {
+    margin: 5px 0; /* Add margin for paragraphs */
+}
+
+
+.image{
+    height: 120px;
+    width: 80%;
+}
+
+.imgClass{
+    height: 100px;
+    width: 100%;
+}
+
+.weather{
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.temp-range {
+    display: flex; 
+    justify-content: space-between; /* Space out the min and max values */
+    width: 100%; 
+
+}
+
+.minValues, .maxValues {
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    height: 45px;
+    width:80px; 
+    margin: 0 5px; /* Horizontal margin for spacing */
+}
+
+.cloudss, .pressure {
+    margin-top: 10px; /* Increase top margin for better spacing */
+    text-align: center;
+    border-radius: 5px;
+    height: 30px; /* Slightly increase height for better visibility */
+    width: 100%; /* Full width for uniformity */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    padding: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 16px; 
+    font-weight: 500; /* Slightly bold for emphasis */
+}
+
+.cloudss {
+    background-color: rgba(173, 216, 230, 0.9); /* Light blue for clouds */
+    color: black;
+}
+
+.pressure {
+    background-color: rgba(255, 222, 173, 0.9); /* Light orange for pressure */
+    color: black;
+}
+
+
+h2{
+    margin-left: auto;
+}
+
+
+@media (max-width: 768px) {
+    .iconsContainer {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center; /* Center align items */
+    }
+    .icons {
+        width: 90%; /* Make icons wider on small screens */
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        width: 90%; /* Make it more fluid on small devices */
+        padding: 10px; /* Add padding for touch targets */
+    }
+
+    .search-Box {
+        flex-direction: column; /* Stack the input and button */
+    }
+
+    .search-Box button {
+        width: 100%; /* Full width for button */
+        margin-top: 10px; /* Space between input and button */
+    }
+
+    .weatherContainer {
+        flex-direction: column; /* Stack weather items vertically */
+    }
+}
+.search-Box input {
+    width: calc(100% - 50px); /* Full width minus button size */
+}
+
+
+
+.hourly{
+    color: black;
+    width: 1070px;
+    height: 290px; 
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius: 20px;
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    position:absolute;
+    left: 31%; 
+    top: 90%; 
+    transform: translateY(-50%) translateX(-20px); 
+    align-items: center;
+}
+
+
+.slider-container{
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: nowrap; 
+    align-items: center;
+}
+.slider-list{
+    align-items: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 190px; 
+    width: 380px;
+    margin: 10px; 
+    border: 5px solid rgb(48, 47, 47);
+    border-radius: 10px;
+    padding: 10px; 
+    background-color:transparent; 
+    transition: transform 0.3s;
+}
+
+
+
+
+.map-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+#google-map {
+    top:20%;
+    width: 100%;
+    height: 80%;
+}
+
+.close-map {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close-map:hover {
+    background: darkred;
+}
+
+  

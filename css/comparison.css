@@ -1,0 +1,404 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif ,"Poppins";
+}
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* This will allow the main content to grow and push the footer down */
+}
+body {
+    background-image: linear-gradient(to bottom,#dcdcdc 50%,#7d7d7d 50% );
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    
+   
+}
+
+.container1,
+.container {
+    color: #ffffff;
+    margin-top:4rem;
+    width: 1200px;
+    height: 600px; 
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius: 20px;
+    transition: opacity 0.4s ease, transform 0.4s ease; 
+    position:relative;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%) translateX(-20px); 
+  
+}
+
+.container.active {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
+    transform: translateY(-50%) translateX(0); /* Slide to the original position */
+}
+
+
+.searchcity,
+.search-city {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 10%;
+}
+
+.headi{
+    text-align: center;
+    font-weight: 500;
+}
+.searchBox,
+.search-Box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+
+}
+.searchBox input,
+.search-Box input{
+    height: 100%;
+    width:100%;
+    background: transparent;
+    border:2px solid;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 3px;
+}
+.searchBox input::placeholder,
+.search-Box input::placeholder{
+    color:black;
+    text-transform: capitalize;
+}
+.searchBox button,
+.search-Box button{
+    width: 40px;
+    height: 100%;
+    background:transparent;
+    right: 0;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.notfound,
+.not-found{
+    position: absolute;
+    top :150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+}
+.notfound img,
+.not-found img{
+    width: 25%;
+}
+.notfound,
+.not-found p{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+.weekdays,
+.weekday {
+    color: black;
+}
+
+
+.city-hide,
+.not-found,
+.weatherContainer,
+.search-city .active
+{
+    visibility: hidden;
+}
+
+
+.not-found.active,
+.weatherContainer.active,
+.search-city
+{
+    visibility: visible;
+}
+
+
+
+
+
+
+.searchcity,
+.search-city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5%;
+}
+
+.headi{
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+
+
+html, body {
+    height: 100%; /* Ensure full height for both html and body */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align children in a column */
+}
+.para2,
+.para{
+    margin: 10px;
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: black; /* Adjust color as needed */
+    margin-bottom: 10px; /* Space below the city name */
+}
+.hide{
+    display: none;
+}
+.paraflag2,
+.paraflag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer {
+    width: 100%;
+    color: white;
+    line-height: 1rem;
+    text-align: center;
+    background-color: #343a40; 
+    padding: 10px 0; /* Add padding for better appearance*/
+    margin-top: 10px;
+    margin-bottom: 0; 
+}
+.text-link {
+    text-decoration: none; 
+    color: white; 
+    position: relative; /* Position for pseudo-element */
+}
+.text-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 100%;
+    height: 2px; 
+    background: rgb(255, 255, 255);
+    transform: scaleX(0); /* Start hidden */
+    transition: transform 0.3s ease; /* Transition for smooth effect */
+}
+
+.text-link:hover::after {
+    transform: scaleX(1); /* Show underline */
+}
+.weatherContainer2,
+.weatherContainer {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    
+}
+
+.iconsContainer2,
+.iconsContainer {
+    display: flex; /* Keep the container flexible */
+    flex-direction: row; /* Set direction to row */
+    justify-content: flex-start; /* Align items to the start */
+    width: 100% /* Allow full width */
+}
+.icons2,
+.icons {
+    display: flex; /* Use flexbox for the icon content */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the icon and text */
+    height: 350px; /* Increased height for more space */
+    width: 400px;
+    margin: 10px; /* Adjust margin for spacing */
+    border: 5px solid rgb(48, 47, 47);
+    border-radius: 10px;
+    padding: 10px; /* Add some padding for spacing */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+    transition: transform 0.3s; /* Smooth scaling effect */
+  
+}
+.icons2:hover,
+.icons:hover {
+    transform: scale(1.05); /* Slightly enlarge the icon on hover */
+}
+
+.icons2 .image2,
+.icons .image {
+    margin-bottom: 10px; /* Space between image and text */
+}
+.icons2 p,
+.icons p {
+    margin: 5px 0; /* Add margin for paragraphs */
+}
+
+.image2,
+.image{
+    height: 120px;
+    width: 80%;
+}
+.imgClass2,
+.imgClass{
+    height: 100px;
+    width: 100%;
+}
+.weather2,
+.weather{
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+.temp-range2,
+.temp-range {
+    display: flex; 
+    justify-content: space-between; /* Space out the min and max values */
+    width: 100%; 
+
+}
+.minValues2, .maxValues2,
+.minValues, .maxValues {
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    height: 45px;
+    width:80px; 
+    margin: 0 5px; /* Horizontal margin for spacing */
+}
+.cloud2, .humidity2,.pressure2,
+.cloud, .humidity, .pressure {
+    margin-top: 10px; /* Increase top margin for better spacing */
+    text-align: center;
+    border-radius: 5px;
+    height: 30px; /* Slightly increase height for better visibility */
+    width: 100%; /* Full width for uniformity */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    padding: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 16px; 
+    font-weight: 500; /* Slightly bold for emphasis */
+}
+.cloud2,
+.cloud {
+    background-color: rgba(173, 216, 230, 0.9); /* Light blue for clouds */
+    color: black;
+}
+.pressure2,
+.pressure {
+    background-color: rgba(255, 222, 173, 0.9); /* Light orange for pressure */
+    color: black;
+}
+.humidity2,
+.humidity {
+    background-color: rgba(144, 238, 144, 0.9); /* Light green for humidity */
+    color: black;
+}
+
+
+
+
+.container1 { 
+    margin-left: 2rem;
+    width: 1150px;
+   left: 10%; 
+    top: 50%; 
+  
+}
+
+
+
+.footer {
+    width: 100%;
+    color: white;
+    line-height: 1rem;
+    text-align: center;
+    background-color: #343a40; 
+    padding: 10px 0; /* Add padding for better appearance */
+    margin-top: 200px; /* Pushes the footer to the bottom */
+}
+
+.cityhide,
+.notfound,
+.weatherContainer2,
+.searchcity .active
+{
+    visibility: hidden;
+}
+
+
+.notfound.active,
+.weatherContainer2.active,
+.searchcity
+{
+    visibility: visible;
+}
+
+
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333; /* Dark navbar */
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+

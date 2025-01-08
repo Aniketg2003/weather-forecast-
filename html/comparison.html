@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/comparison.css">
+  <title>Weather Forecast</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" ><img src="/image/logo1.png" style="height: 45px; width: 50px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link text-link" href="/html/weather.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/comparison.html">Comparison</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/forecast.html">16 Days</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/weatheral.html">Weather Alert</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-link" href="/html/news.html">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/html/about.html">About </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/html/contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <div class="all">
+    <div class="container">
+      <div class="search-Box">
+        <input type="text" placeholder="Enter a city.." style="color: black;">
+        <button class="fa-duotone fa-solid fa-magnifying-glass"></button>
+      </div>
+      <div class="search-city">
+        <img src="/image/photo3.jpg" class="dePhoto">
+        <div class="search-para">
+          <h1 class="headi">Search city</h1>
+          <h4>Find out the weather condition of the city</h4>
+        </div>
+      </div>
+      <div class="paraflag">
+        <p class="para hide" id="cityName">city name</p>
+        <img src="" alt="Flag" class="my-image hide">
+      </div>
+      <div class="weatherContainer hide">
+        <div class="iconsContainer ">
+          <div class="icons">
+            <p class="weather" id="day1"></p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img1"></div>
+            <div class="temp-range">
+              <p class="minValues" id="day1Min">Loading...</p>
+              <p class="maxValues" id="day1Max">Loading...</p>
+            </div>
+            <p class="cloud" id="day1clouds">Clouds: Loading...</p>
+            <p class="pressure" id="day1pressure">Pressure: Loading...</p>
+            <p class="humidity" id="day1humidity">Humidity: Loading...</p>
+          </div>
+          <div class="icons">
+            <p class="weather" id="day2"></p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img2"></div>
+            <div class="temp-range">
+              <p class="minValues" id="day2Min">Loading...</p>
+              <p class="maxValues" id="day2Max">Loading...</p>
+            </div>
+            <p class="cloud" id="day2clouds">Clouds: Loading...</p>
+            <p class="pressure" id="day2pressure">Pressure: Loading...</p>
+            <p class="humidity" id="day2humidity">Humidity: Loading...</p>
+          </div>
+          <div class="icons">
+            <p class="weather" id="day3"></p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img3"></div>
+            <div class="temp-range">
+              <p class="minValues" id="day3Min">Loading...</p>
+              <p class="maxValues" id="day3Max">Loading...</p>
+            </div>
+            <p class="cloud" id="day3clouds">Clouds: Loading...</p>
+            <p class="pressure" id="day3pressure">Pressure: Loading...</p>
+            <p class="humidity" id="day3humidity">Humidity: Loading...</p>
+
+          </div>
+          <div class="icons">
+            <p class="weather" id="day4"></p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img4"></div>
+            <div class="temp-range">
+              <p class="minValues" id="day4Min">Loading...</p>
+              <p class="maxValues" id="day4Max">Loading...</p>
+            </div>
+            <p class="cloud" id="day4clouds">Clouds: Loading...</p>
+            <p class="pressure" id="day4pressure">Pressure: Loading...</p>
+            <p class="humidity" id="day4humidity">Humidity: Loading...</p>
+
+          </div>
+          <div class="icons">
+            <p class="weather" id="day5"></p>
+            <div class="image"><img src="dots.png" class="imgClass" id="img5"></div>
+            <div class="temp-range">
+              <p class="minValues" id="day5Min">Loading...</p>
+              <p class="maxValues" id="day5Max">Loading...</p>
+            </div>
+            <p class="cloud" id="day5clouds">Clouds: Loading...</p>
+            <p class="pressure" id="day5pressure">Pressure: Loading...</p>
+            <p class="humidity" id="day5humidity">Humidity: Loading...</p>
+
+          </div>
+        </div>
+        <div class="not-found">
+          <div class="box">
+            <img src="/image/404.jpg">
+            <p>Oop! Location Not Found</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+      <div class="container1">
+        <div class="searchBox">
+          <input type="text" placeholder="Enter a city.." style="color: black;">
+          <button class="fa-duotone fa-solid fa-magnifying-glass"></button>
+        </div>
+        <div class="searchcity">
+          <img src="photo3.jpg" class="dePhoto">
+          <div class="search-para">
+            <h1 class="headi">Search city</h1>
+            <h4>Find out the weather condition of the first city</h4>
+          </div>
+        </div>
+        <div class="paraflag2">
+          <p class="para2 hide" id="cityName2">city name</p>
+          <img src="" alt="Flag" class="myimage2 hide">
+        </div>
+        <div class="weatherContainer2 hide " >
+          <div class="iconsContainer2">
+            <div class="icons2" id="day1">
+              <p class="weather2" id="day1Weather"></p>
+              <div class="image2"><img src="dots.png" class="imgClass2" id="imga1"></div>
+              <div class="temp-range2">
+                <p class="minValues2" id="day1Min2">Loading...</p>
+                <p class="maxValues2" id="day1Max2">Loading...</p>
+              </div>
+              <p class="cloud2" id="day1clouds2">Clouds: Loading...</p>
+              <p class="pressure2" id="day1pressure2">Pressure: Loading...</p>
+              <p class="humidity2" id="day1humidity2">Humidity: Loading...</p>
+            </div>
+            <div class="icons2">
+              <p class="weather2" id="day2"></p>
+              <div class="image2"><img src="dots.png" class="imgClass" id="imga2"></div>
+              <div class="temp-range2">
+                <p class="minValues2" id="day2Min2">Loading...</p>
+                <p class="maxValues2" id="day2Max2">Loading...</p>
+              </div>
+              <p class="cloud2" id="day2clouds2">Clouds: Loading...</p>
+              <p class="pressure2" id="day2pressure2">Pressure: Loading...</p>
+              <p class="humidity2" id="day2humidity2">Humidity: Loading...</p>
+
+            </div>
+            <div class="icons2">
+              <p class="weather2" id="day3"></p>
+              <div class="image2"><img src="dots.png" class="imgClass" id="imga3"></div>
+              <div class="temp-range2">
+                <p class="minValues2" id="day3Min2">Loading...</p>
+                <p class="maxValues2" id="day3Max2">Loading...</p>
+              </div>
+              <p class="cloud2" id="day3clouds2">Clouds: Loading...</p>
+              <p class="pressure2" id="day3pressure2">Pressure: Loading...</p>
+              <p class="humidity2" id="day3humidity2">Humidity: Loading...</p>
+
+            </div>
+            <div class="icons2">
+              <p class="weather2" id="day4"></p>
+              <div class="image2"><img src="dots.png" class="imgClass" id="imga4"></div>
+              <div class="temp-range2">
+                <p class="minValues2" id="day4Min2">Loading...</p>
+                <p class="maxValues2" id="day4Max2">Loading...</p>
+              </div>
+              <p class="cloud2" id="day4clouds2">Clouds: Loading...</p>
+              <p class="pressure2" id="day4pressure2">Pressure: Loading...</p>
+              <p class="humidity2" id="day4humidity2">Humidity: Loading...</p>
+
+            </div>
+            <div class="icons2">
+              <p class="weather2" id="day5"></p>
+              <div class="image2"><img src="dots.png" class="imgClass" id="imga5"></div>
+              <div class="temp-range2">
+                <p class="minValues2" id="day5Min2">Loading...</p>
+                <p class="maxValues2" id="day5Max2">Loading...</p>
+              </div>
+              <p class="cloud2" id="day5clouds2">Clouds: Loading...</p>
+              <p class="pressure2" id="day5pressure2">Pressure: Loading...</p>
+              <p class="humidity2" id="day5humidity2">Humidity: Loading...</p>
+
+            </div>
+
+          </div>
+          <div class="notfound">
+            <div class="box">
+              <img src="404.jpg">
+              <p>Oop! Location Not Found</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+
+
+
+
+
+
+  <div class=" footer bg-dark">
+    <p class="foot">Copyright © 2024-2025 , Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </div>
+  <script src="/java/comparision.js"></script>
+</body>
+
+</html>
