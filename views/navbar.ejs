@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"><img src="/image/logo1.png" style="height: 45px; width: 50px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link text-link" href="/weather">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/comparison">Comparison</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/forecast">16 Days</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/weatheral">Weather Alert</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/news">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-link" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <% if (username) { %>
+          <li class="nav-item">
+            <span class="navbar-text text-white">Welcome, <%= username %>!</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-link" href="/logout">Logout</a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link text-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-link" href="/register">Register</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+</nav>
